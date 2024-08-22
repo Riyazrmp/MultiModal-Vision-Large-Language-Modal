@@ -406,7 +406,7 @@ class PaliGemmaForConditionalGeneration(nn.Module):
 
            if kv_cache is None or kv_cache.num_items()==0:
 
-            causal_mask = torch.full((batch_size,q_len,q_len),fill_value = 0, dtype = min_dtype,device = device)
+            causal_mask = torch.full((batch_size,q_len,q_len),fill_value = 0, dtype = dtype,device = device)
 
            else:
             assert q_len == 1
@@ -446,7 +446,7 @@ class PaliGemmaForConditionalGeneration(nn.Module):
                 
                 outputs = self.language_model(attention_mask = attention_mask,
                                               position_ids = position_ids,
-                                              input_embeds = input_embeds,
+                                              inputs_embeds = input_embeds,
                                               kv_cache = kv_cache
                                               )
                 return outputs

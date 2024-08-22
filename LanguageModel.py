@@ -36,7 +36,7 @@ def process_images(
         image_std: Optional[Union[float,List[float]]] = None
 )-> List[np.ndarray]:
     height,width = size
-    images =[resize(image =image,scale = (height,width),resample=resample) for image in images]
+    images =[resize(image =image,size = (height,width),resample=resample) for image in images]
 
     images = [np.array(image) for image in images]
 

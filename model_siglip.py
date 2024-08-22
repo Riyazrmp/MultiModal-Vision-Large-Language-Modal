@@ -105,7 +105,7 @@ class SiglipAttention(nn.Module):
 
         batch_size,seq_len,_ = hidden_states.size()
 
-        query_states = self.q_jproj(hidden_states)
+        query_states = self.q_proj(hidden_states)
         key_states = self.k_proj(hidden_states)
         value_states = self.v_proj(hidden_states)
 

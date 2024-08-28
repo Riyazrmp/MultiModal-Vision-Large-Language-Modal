@@ -17,3 +17,5 @@ Toggle the ONLY_CPU varible to False if you wanna run the inference on the GPU o
 
 Now run the lunch.sh script
 
+Special thanks to Umar Jamil for his video on coding Paligemma, which provided invaluable guidance.
+
